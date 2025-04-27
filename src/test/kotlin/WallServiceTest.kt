@@ -78,7 +78,7 @@ class WallServiceTest {
         )
     }
 
-    @Test
+    @Test(expected=PostNotFoundException::class)
     fun createCommentException() {
         val service = WallService
         service.addPost(
